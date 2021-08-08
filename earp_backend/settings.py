@@ -25,7 +25,8 @@ SECRET_KEY = 'django-insecure-q&7f3^7(l5ke+=n+wa-&b_=0=_&&url&-#fk95i^*&ygjb*^^_
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
+CORS_ORIGIN_ALLOW_ALL=True
 
 
 # Application definition
@@ -40,6 +41,7 @@ INSTALLED_APPS = [
     'store',
     'mptt',
     'rest_framework',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -50,6 +52,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
 ]
 
 ROOT_URLCONF = 'earp_backend.urls'
