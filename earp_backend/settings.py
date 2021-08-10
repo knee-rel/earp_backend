@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-q&7f3^7(l5ke+=n+wa-&b_=0=_&&url&-#fk95i^*&ygjb*^^_'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['https://earp-api.herokuapp.com', '127.0.0.1']
 CORS_ORIGIN_ALLOW_ALL=True
